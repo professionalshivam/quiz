@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Master | Premium Quiz Experience</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="background-orb orb-1"></div>
+    <div class="background-orb orb-2"></div>
+
+    <div class="container">
+        <!-- Start Screen -->
+        <div id="start-screen" class="screen active">
+            <h1>Quiz Master</h1>
+            <p>Test your knowledge with our premium quiz experience.</p>
+            <div class="high-score-display">High Score: <span id="home-high-score">0</span></div>
+            <button id="start-btn" class="btn primary">Start Quiz</button>
+        </div>
+
+        <!-- Quiz Screen -->
+        <div id="quiz-screen" class="screen hidden">
+            <div class="quiz-header">
+                <div class="timer-container">
+                    <svg class="timer-svg" viewBox="0 0 100 100">
+                        <circle class="timer-circle-bg" cx="50" cy="50" r="45"></circle>
+                        <circle class="timer-circle-progress" cx="50" cy="50" r="45"></circle>
+                    </svg>
+                    <span id="time-left">15</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar" id="progress-bar"></div>
+                </div>
+                <div class="score-badge">Score: <span id="current-score">0</span></div>
+            </div>
+
+            <div class="question-container">
+                <h2 id="question-text">Question text goes here?</h2>
+            </div>
+
+            <div class="options-container" id="options-container">
+                <!-- Options will be injected here -->
+            </div>
+
+            <div class="controls">
+                <button id="prev-btn" class="btn secondary" disabled>Previous</button>
+                <button id="next-btn" class="btn primary">Next</button>
+            </div>
+        </div>
+
+        <!-- Result Screen -->
+        <div id="result-screen" class="screen hidden">
+            <h2>Quiz Completed!</h2>
+            <div class="result-circle">
+                <span id="final-score">0</span>
+                <small>Total Score</small>
+            </div>
+            <p id="result-message">Great job!</p>
+            <button id="restart-btn" class="btn primary">Play Again</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
